@@ -33,7 +33,7 @@ def findSecondLargest(ls):
     return sLargest
 
 
-ls = [10, 6, 7, 5, 4, 1, 2]
+ls = [10, 6, 7, 5, 4, 1, 2, 22, 2]
 
 
 print(findSecondSmallest(ls))
