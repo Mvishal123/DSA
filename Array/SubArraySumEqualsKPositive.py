@@ -37,5 +37,8 @@ def longest_sub_array(ls, k):
 
 
 
+
+
+
 print(number_of_sub_arrays(arr, 3))
 print(longest_sub_array(arr, 3))
