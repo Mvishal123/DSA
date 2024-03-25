@@ -6,5 +6,4 @@ def printWordNTimes(string, N):
         N-=1
         printWordNTimes(string, N)
 
-
 printWordNTimes("hello", 10)
