@@ -1,47 +1,25 @@
-# arr = [1,2,3,4,5,7]
-# k = 2
-# ans = []
-# for i in range(k, len(arr)):
-#     ans.append(arr[i])
-# for i in range(k):
-#     ans.append(arr[i])
-# print(ans)
+ls = [2, 4, 1, 7, 10]
+k = 14
 
-# Time Complexity : O(n)
+# Sum -lte k
+max_len = 0
+for i in range(len(ls)):
+    _sum = 0
+    for j in range(i, len(ls)):
+        _sum += ls[j]
 
-ls = [2, 0, 4, 3, 0, 0, 1, 4, 5]
-# ls_zero = []
-# ls_other = []
-# for i in ls:
-#     if i == 0:
-#         ls_zero.append(i)
-#     else:
-#         ls_other.append(i)
-# zero = 0
-# for i in ls:
-#     if i == 0:
-#         zero+=1
-#     else:
-#         print(i, end = " ")
-# for i in range(zero):
-#     print(0, end = " ")
-# print(ls_other + ls_zero)
+        if _sum > k:
+            break
+        else:
+            max_len = max(max_len, j - i + 1)
 
-# UNION OF 2 SORTED ARRAY
-# ls1 = [1, 1, 2, 3, 4, 5]
-# ls2 = [2, 3, 4, 4, 5]
-#
-# index1 = 0
-# index2 = 0
-#
-# while index1 < len()
+print(max_len)
 
+def get_all_sub_arrays():
+    for i in range(len(ls)):
+        for j in range(i, len(ls)):
+            print(ls[i:j + 1])
 
-ls = [1, 2, 3, 4, 5, 6, 7, 8]
+        print("------------------")
 
-d = 3
-
-# BRUTE FORCE
-
-
-
+# get_all_sub_arrays()
