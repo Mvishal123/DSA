@@ -20,20 +20,28 @@ def method_1():
 
 
 def method_2():
-    l = 0
-    r = 0
-    max_len = 0
-    store = {}
+    l, r = 0, 0
+    _len = 0
+    store = dict()
 
     while r < len(ls):
-        if l != r and store.get(ls[r]) !=         while not store.get(ls[r]) and l <= r:
-            store[ls[r]] = 1
+        if store.get(ls[r]) and r > store.get(ls[r]) >= l:
+            l = store.get(ls[r]) + 1
 
-        max_len = max(max_len, r - l + 1)
+        _len = max(_len, r - l + 1)
+        store[ls[r]] = r
+
+        print(store)
+        r += 1
+
+    print(_len)
 
 
 
 
 
-method_1()
+
+
+# method_1()
+method_2()
 
