@@ -29,9 +29,9 @@ def sub_pattern():
     print(lists)
 
 def optimal_method():
-    ls = [2, 5, 1, 10, 10]
+    ls = [1, 1, 1, 3, 2, 2, 2, 1, 1, 1, 1, 2]
     lists = []
-    k = 14
+    k = 6
 
     l, r = 0, 0
     _sum = 0
@@ -40,10 +40,11 @@ def optimal_method():
     while r < len(ls):
         _sum += ls[r]
 
-        while _sum > k and (l - r + 1) > _len:
+        while _sum > k and (r - l + 1) > _len:
             _sum -= ls[l]
+            l += 1
 
-        if _sum <= k:
+        if _sum == k:
             _len = max(_len, r - l + 1)
             lists.append(ls[l: r + 1])
 
