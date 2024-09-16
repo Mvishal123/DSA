@@ -1,5 +1,4 @@
-ls = [1, 1, 1, 2, 2, 0, 0, 1, 0, 2, 2, 1, 0]
-
+ls = [0, 1, 2, 0, 1, 2 ]
 
 
 def swap(ls, index1, index2):
@@ -19,7 +18,25 @@ def bubbleSort():
     print(ls)
 
 
-bubbleSort()
+def dutchNationalFlagSort(ls):
+    low = 0
+    high = len(ls) - 1
+    ptr = 0
 
+    while ptr <= high:
+        if ls[ptr] == 0:
+            swap(ls, low, ptr)
+            low += 1
+
+        elif ls[ptr] == 2:
+            swap(ls, ptr, high)
+            high -= 1
+            ptr -= 1
+        ptr += 1
+    print(ls)
+
+
+# bubbleSort()
+dutchNationalFlagSort(ls)
 
 
