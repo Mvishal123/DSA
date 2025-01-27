@@ -1,33 +1,67 @@
-n1 = 20
-n2 = 24
+# t = 5
+# ls = [1, 2, 1, 3, 2, 1]
+#
+# hashArr = [0 for i in range(13 + 1)]
+#
+# for i in ls:
+#     hashArr[i] += 1
+#
+# n = [2, 3, 4, 1]  
+#
+# for i in n:
+#     print(f"Count of {i}: {hashArr[i]}")
 
 
-def gcd1(n1, n2):
-    gcd = 0
-    for i in range(1, min(n1, n2) + 1):
-        if n1 % i == 0 and n2 % i == 0:
-            gcd = i
+# ch = "asdasfaevciaez"
+# hashCh = [0 for i in range(25 + 1)]
+#
+# for i in ch:
+#     hashCh[ord(i) - 97] += 1
+#
+#
+# for i in range(26):
+#     print(f"Count of {chr(97 + i)} = {hashCh[i]}")
 
-    print(gcd)
+# ls = [12, 1, 2, 3, 2, 2, 1, 2, 3, 12]
+#
+# store = dict()
+#
+# for i in ls:
+#     store[i] = store.get(i, 0) + 1
+#
+# for i in store.keys():
+#     print(i)
+#
+# print(store)
 
-def gcd2(n1, n2):
-    for i in range(min(n1, n2), 0, -1):
-        if n1 % i == 0 and n2 % i == 0:
-            print(i)
-            break
+# set is ordered
+# myset = {5, 3, 4, 2, 1}
+# fset = frozenset({5, 1, 2, 3, 4, 5, 1})
+# tup = (5, 3, 2, 1, 3, 1 )
+#
+#
+# myset.add(12)
+# print(myset)
+# print(fset)
+# print(tup)
 
-def euclidean_gcd(n1, n2):
-    while n1 > 0 and n2 > 0:
-        if n1 > n2:
-            n1 = n1 - n2
-        else:
-            n2 = n2 - n1
+ls = [5,10,10,5,10,15,10,5]
 
-    if n1 == 0:
-        print(n2)
+store = dict()
+
+for i in ls:
+    store[i] = store.get(i, 0) + 1
+
+print(store)
+firstMax = -1
+secondMax = -1
+
+for key, value in store.items():
+    if value > firstMax:
+        secondMax = firstMax
+        firstMax = key
     else:
-        print(n1)
+        if value > secondMax:
+            secondMax = key
 
-gcd1(n1, n2)
-gcd2(n1, n2)
-euclidean_gcd(n1, n2)
+print(firstMax, secondMax)
